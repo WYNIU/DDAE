@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>DDAE</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./DDAE_files/icon-bulb-2-512.png" sizes="512x512">
+
+    <link rel="stylesheet" href="./DDAE_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./DDAE_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./DDAE_files/codemirror.min.css">
+    <link rel="stylesheet" href="./DDAE_files/app.css">
+
+    <link rel="stylesheet" href="./DDAE_files/bootstrap.min.css">
+
+    <script src="./DDAE_files/jquery.min.js"></script>
+    <script src="./DDAE_files/bootstrap.min.js"></script>
+    <script src="./DDAE_files/codemirror.min.js"></script>
+    <script src="./DDAE_files/clipboard.min.js"></script>
+    
+    <script src="./DDAE_files/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <br><b>Dynamically documenting archaeological excavations based on 3D modeling</b>
+                <small>
+                    <br> a case study of the excavation of the #3 fossil of hominin cranium from Yunxian, Hubei, China 
+                    <br> Manuscript for heritage Science 2024.03 <br>
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                            Wenyuan NIU
+                        <br>Wuhan University
+                    </li>
+                    <li>
+                            Chengqiu LU
+                        <br>Hubei Provincial Institute of Cultural Relics and Archaeology
+                    </li>                    
+                    <li>
+                            Xianfeng HUANG
+                        <br>Wuhan University
+                    </li>  
+                    <li>
+                            Yinghua LI
+                            <br>Wuhan University
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <img src="./DDAE_files/teaser.jpg" class="img-responsive" alt="overview" width="800" style="display: block; margin: auto;"><br>
+                <p class="text-justify">
+                    Documenting tangible cultural heritage using 3D modeling techniques is gradually becoming an indispensable component of archaeological practice. 
+                    The 3D modeling techniques based on photogrammetry and LiDAR scanning enable high-accuracy and high-realistic reconstruction of sites and ruins, and have been proven a powerful tool for documenting archaeological excavations. 
+                    However, dynamically documenting an ongoing excavation using these techniques is still considered tedious, time-consuming, expensive, and dependent on expertise. 
+                    In these senses, documenting the archaeological excavation at the Yunxian Man site (located in Hubei, China) is an invaluable opportunity for exploration and practice. 
+                    Archaeologists determined to conduct dynamically documenting at the beginning of the 6th excavation project for the site, and established a rotation system to reconcile physical excavation with digital preservation. Through repeated practice and communication, we proposed a workflow and pursued several new methods to enhance the feasibility of dynamically documenting, and obtained multi-temporal 3D models of the ongoing archaeological excavations. 
+                    In 2022, the Yunxian Man site unearthed the most intact fossil of hominin cranium from about one million years ago in the Eurasian continent, preserving important and scarce anatomical features of early humans in Asia. As the original taphonomic context of the fossil corroded away during physical excavations, the digital documentation consisting of multi-temporal 3D models serves as permanent original data source in subsequent archaeological research. 
+                    Moreover, we obtained cross-scale 3D models from geographical environment to archaeological site, excavation area, and cultural remains, and all of these 3D models are in an actual, unified coordinate framework. Thus, we can contribute to multidisciplinary cross-collaborative research through data sharing. 
+                    Considering that digital documentations serve a great value in archaeological research, this paper focuses on sharing the workflow and methods to facilitate digital preservation for more archaeological projects.
+
+                </p><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Overview
+                </h3>
+                <div class="text-center">
+                        <img src="./DDAE_files/pipline.jpg" class="img-responsive" alt="pipline" width="800" style="display: block; margin: auto;"><br>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Method 
+                </h3>
+                <p class="text-justify">
+                    <b>1. Multi-level Control Network</b><br>
+                    The main equipment used to set up a multi-level control network includes RTK (Real Time Kinematic) and ETS (Electronic Total Station). <br>
+                    RTK is used to survey the geographic coordinates of GCPs in areas where CORS (Continuously Operating Reference System) signals are available (usually open outdoor areas).<br> 
+                    ETS is able to survey geographic coordinates without a CORS signal (usually used indoors), but it requires setting up a station at a point location with known geographic coordinates. <br>
+                    We use Daspatial miniRTK and THINRAD TTS-112R10M ETS in our practice. <br>
+                </p><br>
+
+                <p class="text-justify">
+                    <b>2. Data Collection</b><br>
+                    In practice, we use a DJI M300 UAV carrying a self-developed multi-lens camera named Daspatial Shuangyu 7X Pro to accomplish <b>Aerial Photogrammetry</b>.<br>
+                    In practice, we use a Canon 5D Mark IV DSLR camera to accomplish <b>Close-range Photogrammetry</b>.<br>
+                    In practice, we use a Trimble X7 stationary LiDAR scanner to accomplish <b>Stationary LiDAR Scanning</b>.<br>
+                    In practice, we use a KScan-Magic II handheld LiDAR scanner to accomplish <b>Handheld LiDAR Scanning</b>.<br><br>
+
+                    We do not provide links for hardware devices as we do not aim to promote them commercially. You may use similar products instead.
+                </p><br>
+
+                <p class="text-justify">
+                    <b>3. Cross-scale Data Fusion 3D Modeling & Multi-source Data Fusion 3D Modeling</b><br>
+                    In practice, we perform the <b>Cross-scale Data Fusion 3D Modeling</b> and <b>Multi-source Data Fusion 3D Modeling</b> with <b>GET3D</b>, and browse real-world 3D models using <b>DasViewer</b>
+
+                </p><br>
+
+                <p class="text-justify">
+                    <b>4. Fast Cloud-based 3D Modeling</b><br>
+                    Our team has developed the fast cloud-based modeling technology as <b>DasEarth</b>, an online modeling platform that is open to the public.
+                    To perform 3D modeling with it, all we need to do is upload data and stab GCPs, and then the system will automatically generate a 3D model. 
+
+
+                </p><br>
+
+                <p class="text-justify">
+                    <b>5. Multi-temporal 3D Model Fusion</b><br>
+                    Although the method of <b>Multi-temporal 3D Model Fusion</b> is relative complicated, all the steps of it are integrated into the 3D model post-processing software <b>DasMesh</b> and the 3D model viewer software <b>DasViewer</b>.
+                    
+
+                </p><br>
+
+                <p class="text-justify">
+                    <b>6. Evaluation Metrics</b><br>
+                    (1) In practice, we programmed the geometric refinement calculation of 3D models. We will soon develop a free and handy tool in <b>DasViewer</b> to provide this function.<br>
+                    (2) In practice, we use <b>DasMesh</b> (Step 1), <b>Windows Paint</b> (Step 2), <b>DasViewer</b> (Step 3), and <b>Microsoft Excel</b> (Step 4) to achieve the above-mentioned operations. We will soon develop a free and handy tool in DasViewer to provide the functions of Step 2, Step 3 and Step 4.<br>
+                    (3) Please go to this repository (<a href="https://github.com/WYNIU/DDAE_Compute_3D_Model_Refinement">DDAE_Compute_3D_Model_Refinement</a>) to get the relevant code, files and sample data.
+                </p><br>
+
+                <p class="text-justify">
+                    <b>Tips:</b><br>
+
+                    (1) All the software mentioned above, except Windows Paint and Microsoft Excel, were developed by ourselves. You can click the logo image below to open the introduction page of the software and download it. <br>
+                    (2) DasEarth requires registration. DasViewer is entirely free. Other software may meet license issues when the trial expires. You can email the first author (<a href="mailto:niu_wenyuan@whu.edu.cn">Send an e-mail to Wenyuan NIU</a>) to get a trial license for academic research and cultural heritage preservation purposes.<br>
+                    (3) English versions of all software are being planned, only Chinese versions are available now. We are sorry and will move forward with the English version as soon as possible.<br><br>
+                <div class="logo-container">
+                    <a href="https://www.daspatial.com/cn/gcluster " target="_blank">
+                        <img src="./DDAE_files/01.jpg" alt="GET3D" width="150">
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <a href="https://www.get3d.cn/" target="_blank">
+                        <img src="./DDAE_files/03.jpg" alt="DasEarth" width="150">
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <a href="https://www.daspatial.com/cn/dasmesh" target="_blank">
+                        <img src="./DDAE_files/04.jpg" alt="DasMesh" width="150">
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <a href="https://www.daspatial.com/cn/dasviewer" target="_blank">
+                        <img src="./DDAE_files/02.jpg" alt="DasViewer" width="150">
+                    </a>
+                </div>
+                </p>
+
+
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 id="video">
+                    More Results (Continuously updating)                    
+                </h3>                
+                    Constrained by a confidentiality agreement, we present a limited number of results in our paper. We will gradually update more results here, and they may not limited to the Yunxian Man site.
+                <br>
+            </div>
+        </div>
+ 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 id="video">
+                    Operation Guidance (Continuously updating)
+                </h3>           
+                    (1) We will update some of the text and video tutorials to help more archaeologists with dynamic documenting when we have enough time. This may not be until after June 2024. <br>
+                    (2) You can email me (<a href="mailto:niu_wenyuan@whu.edu.cn">Send an e-mail to Wenyuan NIU</a>) if you encounter problems that make it difficult to operationalize the methods in our paper. I will do my best to reply in time and update the solutions to common problems here.
+                <br>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    BibTeX
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly="" style="display: none;">
+                        @article{WenyuanNIU2024HeritageScience,
+                            title={Dynamically documenting archaeological excavations based on 3D modeling: a case study of the excavation of the #3 fossil of hominin cranium from Yunxian, Hubei, China.},
+                            author={Wenyuan Niu and Chengqiu Lu and Qiushi Zou and Yunbing Luo and Xuan Wang and Hanyu Xiang and Fan Zhang and Xing Gao and Song Xing and Xuan Wei and Wentai Lou and Dailong Huang and Cheng Wang and Dongqing Jiang and Xiaofeng Wan and Zhongyun Zhang and Huanghao Yin and Jiayang Lu and Feng Wang and Xianfeng Huang* and Yinghua Li*},
+                            journal={Heritage Science},
+                            volume={},
+                            pages={},
+                            year={2024},
+                            publisher={Springer}
+                            link={}
+                            doi={}
+                            } -->
+                    </textarea>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+                    We are very grateful to the editors and reviewers for their hard work, constructive comments and inspiring suggestions.<br>
+                    This work was supported by the National Key R&D Program of China (No.2020YFC1523003, No.2020YFC1522703).<br>                    
+                    The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
